@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: structure.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: structure.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @class 
+Creates each object inside the ship. 
+* @param {array} affiliations - Tags for classification of the objects. 
+* @param {array} boxDimensions - Physical dimensions of the object.
+* @param {array} weight - Weight of the object in specific loading condition.
+* @param {array} cost - Monetary cost of the object.
+* @param {array} capabilities - Specific characteristics of the object.
+* @param {file} file - 2D, 3D file of the object.
+
+
+*/
+
+baseObjects = {
+  "Aerial4": {
+      /** @memberof baseObjects# 
+         * @constructs affiliations
+         * @param {string} Deck - Deck where the object is located.
+         * @param {string} Type - Type of object.
+         * @param {string} SFI - Coding and classification system.
+         */
+      "affiliations": {"Deck": "WheelHouseTop", "Type": "Tank" ,"SFI": "806"},
+      /** @memberof baseObjects# 
+         * @constructs boxDimensions
+         * @param {number} length - Lenght of the object.
+         * @param {number} width - Width of the object.
+         * @param {number} height - Height of the object.
+         */
+      "boxDimensions": {
+        "length": 100,
+        "width": 123,
+        "height":34
+      },
+      /** @memberof baseObjects#
+         * @constructs weight 
+         * @param {number} mass - Mass of the object in specific loading condition.
+         * @param {array} cg - Coordinates of the cg of the object in specific loading condition.
+         */
+      "weight": {
+          "lightweight": {
+              "mass": 400,
+              "cg": [0,0,5]
+          },
+        
+      },
+      /** @memberof baseObjects# 
+         * @constructs cost
+         * @param {string} currency - Currency.
+         * @param {number} value - Cost of the object.
+         */
+	  "cost": {
+		  "currency": "Trumps",
+		  "value": 5999999999,
+	  },
+      /** @memberof baseObjects# 
+         * @constructs capabilities
+         * @param {number} fluidDensity - Density of the fluid storaged in the object.
+         * @param {number} areaRequired - Physical total area required for the disposition of the object.
+         * @param {number} volRequired - Physical total volume required for the disposition of the object.
+         */
+      "capabilities": {
+        "FluidDensity": "",
+        "AreaRequired": "",
+        "VolRequired": "",
+      },
+      "file3D": "aerial.stl"
+  },
+  
+}
+/** @class 
+Class for the location of the objects inside the ship.
+* @param {array} id - Id of the object. 
+* @param {array} baseObject - Model of the object.
+* @param {number} position - Coordinates of the object inside the ship.
+* @param {array} weightState - ???
+*/
+objects = [
+  {
+    "id": "Aerial4",
+    "baseObject": "Aerial",
+      /** @memberof objects# 
+         * @constructs position
+         * @param {number} xCentre - X coordinate of the centre of the object.
+         * @param {number} yCentre - Y coordinate of the centre of the object.
+         * @param {number} zBase - Z coordinate of the base of the object.
+         */
+    "position": {
+          "xCentre": "64.5",
+          "yCentre": "2.5",
+          "zBase": "28.35"
+    },
+  	"weightState": "lightweight"
+  },
+  
+
+
+]
+/** @class 
+Class for the calculations of the ship.
+* @param {method} holtrop - Method used to estimate the resistance of displacement ships. 
+*/
+calculations = {
+    /** @memberof calculations# 
+         * @constructs holtrop
+         * @param {array} fixedInputs - Fixed variables for holtrop method.
+         * @param {array} variableInputs - Variable inputs for holtop method.
+         */
+	"holtrop": {
+		"fixedInputs": {"LOA":10},
+		"variableInputs":{
+			"draft": {
+				"min": 0.5,
+				"max": 10,
+				"step": 0.5,
+				"unit": "m"
+			},
+			"angle": {
+				"min": 0,
+				"max": 180,
+				"step": 0.5,
+				"unit": "degrees"
+			}
+		}}}
+/** @class 
+Specifies the variables inherents to the vessel.
+* @param {array} attributes - Variables related to the physical dimensions of the ship.
+* @param {array} hullOffsets - Table of offsets for the hull.
+* @param {array} structure - Defines the decks and the bulkheads of the shio.
+*/
+vessel= {
+    /** @memberof vessel# 
+         * @constructs attributes
+         * @param {number} LOA - The maximum length of the ship
+         * @param {number} BOA - The overall width of the ship measured at the widest point of the nominal waterline.
+         * @param {number} Depth - Vertical distance measured from the top of the keel to the underside of the upper deck at side.
+         * @param {number} Draft_Design - Desgin vertical distance from the bottom of the keel to the waterline.
+         * @param {number} Airdraft_Design - Design distance from the surface of the water to the highest point on a vessel. 
+         * @param {number} Freeboard_Design - Design depth plus the height of the keel structure minus draft.
+         * @param {number} LWL_Design -  Design length at the waterline. Is the length from the forwardmost point of the waterline measured in profile to the stern-most point of the waterline.
+         * @param {number} APP_Design -  ???
+         * @param {number} FPP_Design -  ???
+         * @param {number} camber -  Measure of lateral main deck curvature.
+         
+         */
+	"attributes": {
+		"LOA":12, 
+		"BOA":12,
+		"Depth":12,
+		"Draft_Design":43,
+		"Airdraft_Design":12,
+		"Freeboard_Design":12,
+		"Cb_Design":12,
+		"LWL_Design":12,
+		"APP_Design":12,
+		"FPP_Design":12,
+		"camber":12,
+	},
+	"hullOffsets": {
+		halfBreadths: {
+			stations: [],
+			waterlines: [],
+			table: [[],[],[],[]]
+		},
+		buttockHeights: {}
+	},
+        /** @memberof vessel# 
+         * @constructs structure
+         * @param {number} zFloor - Coordinate in z-axis of the floor of the deck.
+         * @param {number} thickness - Thickness of the deck.
+         * @param {number} xAft - Coordinate in x-axis of the closest point to the stern.
+         * @param {number} xFwd - Coordinate in x-axis of the furthest  point to the stern.
+         * @param {number} yCenter - Coordinate in y-axis of the center of the deck.
+         * @param {number} breadth - Width of the deck.
+         * @param {number} density -  Density of the material of the deck
+         
+         */
+	"structure": {
+		"decks": {
+			"MainDeck": {
+				"zFloor":12,
+				"thickness":12,
+				"xAft":12,
+				"xFwd":12,
+				"yCenter":12,
+				"breadth":12,
+				"density":12
+			},
+		},
+        /** @memberof vessel# 
+         * @constructs bulkheads
+         * @param {number} thickness - Thickness of the bulkhead.
+         * @param {number} xAft - Coordinate in x-axis of the closest point to the stern.
+         * @param {number} density -  Density of the material of the bulkhead.
+         
+         */
+		"bulkheads": {
+			"AB": {
+				"xAft":12,
+				"thickness":12,
+				"density":12
+			}
+		}
+	}
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="baseObjects.html">baseObjects</a></li><li><a href="baseObjects_affiliations.html">affiliations</a></li><li><a href="baseObjects_boxDimensions.html">boxDimensions</a></li><li><a href="baseObjects_capabilities.html">capabilities</a></li><li><a href="baseObjects_cost.html">cost</a></li><li><a href="baseObjects_weight.html">weight</a></li><li><a href="calculations.html">calculations</a></li><li><a href="calculations_holtrop.html">holtrop</a></li><li><a href="objects.html">objects</a></li><li><a href="objects_position.html">position</a></li><li><a href="vessel.html">vessel</a></li><li><a href="vessel_attributes.html">attributes</a></li><li><a href="vessel_bulkheads.html">bulkheads</a></li><li><a href="vessel_structure.html">structure</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.0</a> on Tue Jul 11 2017 13:16:05 GMT+0200 (Romance Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
