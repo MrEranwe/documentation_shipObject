@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: FreqResponseShipMotion</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: FreqResponseShipMotion</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>FreqResponseShipMotion<span class="signature">(Length, W_Breadth, Block, Draft, Speed, heading, Position, Wave_Amplitude, Cwp, GM, natural_period, critical_damping_percentage, delta)</span><span class="type-signature"> &rarr; {<a href="global.html#Jensen">Jensen</a>}</span></h2>
+        
+            <div class="class-description">FreqResponseCalculate the frequency response of the Ship based on the Jesen article "Estimation of ship motions using closed-form expressions"(January 2004)</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="FreqResponseShipMotion"><span class="type-signature"></span>new FreqResponseShipMotion<span class="signature">(Length, W_Breadth, Block, Draft, Speed, heading, Position, Wave_Amplitude, Cwp, GM, natural_period, critical_damping_percentage, delta)</span><span class="type-signature"> &rarr; {<a href="global.html#Jensen">Jensen</a>}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Length</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Length of the Ship</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>W_Breadth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Waterline Breadth(B0)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Block</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Block coefficient</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Draft</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Draft of the vessel</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Speed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">relative speed of the vessel and the water in knot</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>heading</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">heading of the wave</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Position</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">position of the wave from the center of gravity</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Wave_Amplitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">wave amplitude</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Cwp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Water plane coefficient</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GM</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Metacentric Height</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>natural_period</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">natural period of the Wave in seconds</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>critical_damping_percentage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">coeficient of the critical damping percentage</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>delta</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">displacement of the vessel in kg</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line715">line 715</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the Ship response for a group of frequency.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#Jensen">Jensen</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Azimuth.html">Azimuth</a></li><li><a href="baseObjects.html">baseObjects</a></li><li><a href="baseObjects_affiliations.html">affiliations</a></li><li><a href="baseObjects_boxDimensions.html">boxDimensions</a></li><li><a href="baseObjects_capabilities.html">capabilities</a></li><li><a href="baseObjects_cost.html">cost</a></li><li><a href="baseObjects_weight.html">weight</a></li><li><a href="calculations.html">calculations</a></li><li><a href="FreqResponseShipMotion.html">FreqResponseShipMotion</a></li><li><a href="MainPropeller.html">MainPropeller</a></li><li><a href="objects.html">objects</a></li><li><a href="objects_position.html">position</a></li><li><a href="Propeller.html">Propeller</a></li><li><a href="Rudder.html">Rudder</a></li><li><a href="TunnelThruster.html">TunnelThruster</a></li><li><a href="vessel.html">vessel</a></li><li><a href="vessel_attributes.html">attributes</a></li><li><a href="vessel_bulkheads.html">bulkheads</a></li><li><a href="vessel_structure.html">structure</a></li></ul><h3>Global</h3><ul><li><a href="global.html#holtrop">holtrop</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.1</a> on Thu Jul 13 2017 11:41:05 GMT+0200 (Romance Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

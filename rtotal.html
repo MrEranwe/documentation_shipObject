@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: boxDimensions</title>
+    <title>JSDoc: Class: rtotal</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: boxDimensions</h1>
+    <h1 class="page-title">Class: rtotal</h1>
 
     
 
@@ -28,8 +28,9 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>
-            <span class="ancestors"><a href="baseObjects.html">baseObjects</a>#</span>boxDimensions<span class="signature">(length, width, height)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>rtotal<span class="signature">(k, rf, rapp, rw, rb, rtr, ra)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">rtotalcalculates total resistance</div>
         
     
 </header>
@@ -40,9 +41,11 @@
         
 
     
+    <h2>Constructor</h2>
+    
 
     
-    <h4 class="name" id="boxDimensions"><span class="type-signature"></span>new boxDimensions<span class="signature">(length, width, height)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="rtotal"><span class="type-signature"></span>new rtotal<span class="signature">(k, rf, rapp, rw, rb, rtr, ra)</span><span class="type-signature"></span></h4>
     
 
     
@@ -82,7 +85,7 @@
 
         <tr>
             
-                <td class="name"><code>length</code></td>
+                <td class="name"><code>k</code></td>
             
 
             <td class="type">
@@ -98,14 +101,14 @@
 
             
 
-            <td class="description last">Lenght of the object.</td>
+            <td class="description last">Canoe body form factor - 1984 version</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>width</code></td>
+                <td class="name"><code>rf</code></td>
             
 
             <td class="type">
@@ -121,14 +124,14 @@
 
             
 
-            <td class="description last">Width of the object.</td>
+            <td class="description last">Frictional resistance</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>height</code></td>
+                <td class="name"><code>rapp</code></td>
             
 
             <td class="type">
@@ -144,7 +147,99 @@
 
             
 
-            <td class="description last">Height of the object.</td>
+            <td class="description last">Appendage resistance</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rw</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Corrected resistance value</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Bulb resistance</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rtr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Transformed pressure resistance</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ra</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Model-ship correlation resistance</td>
         </tr>
 
     
@@ -185,7 +280,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line58">line 58</a>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line1433">line 1433</a>
     </li></ul></dd>
     
 

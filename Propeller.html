@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Propeller</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Propeller</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>Propeller<span class="signature">(position, Diameter, maxrpm, maxkw, rho<span class="signature-attributes">opt</span>, Ct<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">PropellerCreates an instance of Propeller.</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    
+    <h4 class="name" id="Propeller"><span class="type-signature"></span>new Propeller<span class="signature">(position, Diameter, maxrpm, maxkw, rho<span class="signature-attributes">opt</span>, Ct<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>position</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Position of the propeller in the vessel</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Diameter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Diameter of the propeller (m)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxrpm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">maximum allowed rotation per minute</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>maxkw</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">maximum allowed power in kilowatts(kW)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>rho</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Water Density. if not defined, 1025 is assumed</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Ct</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Propeller Coefficient, define its efficiency.if not defined, 1 is assumed</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line308">line 308</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>class Propeller{
+      
+    constructor(position,Diameter,maxrpm,maxkw,rho,Ct){
+        this.maxkw = maxkw;
+        this.maxrpm = maxrpm;
+        if(typeof rho == 'undefined'){this.rho = 1025;}else{
+        this.rho = rho;}
+        this.Diameter = Diameter;
+        this.x = position[0];
+        this.y = position[1];
+        this.z = position[2];
+        if(typeof Ct == 'undefined'){this.Ct = 1;}else{
+        this.Ct = Ct;
+        }
+    }</code></pre>
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="CalForce"><span class="type-signature"></span>CalForce<span class="signature">(inputrpm)</span><span class="type-signature"> &rarr; {float}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Calculate the Trust generated by the rotation of the propeller
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputrpm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line398">line 398</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    -Force generate by the given rpm
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">float</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>CalForce(inputrpm){
+
+        if(inputrpm &lt; 0){
+        return -(Math.pow(this.rpmsat(inputrpm),2)*Math.pow(this.Diameter,4)*(this.rho)*this.Ct);
+        }
+        return (Math.pow(this.rpmsat(inputrpm),2)*Math.pow(this.Diameter,4)*(this.rho)*this.Ct);
+
+
+    }</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Force2rpm"><span class="type-signature"></span>Force2rpm<span class="signature">(trust)</span><span class="type-signature"> &rarr; {float}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Reverse method of CalForce. Calculate the rotation needed to generate the given force
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>trust</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the force the propeller is causing (N)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line424">line 424</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - the rotation needed (rpm)
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">float</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>Force2rpm(trust){
+        if(trust &lt; 0){
+             return -(Math.sqrt(-trust/(this.rho*this.Ct))/(Math.pow(this.Diameter,2)));
+
+        }else
+            return (Math.sqrt(trust/(this.rho*this.Ct))/(Math.pow(this.Diameter,2)));
+
+    }</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="kw2rpm"><span class="type-signature"></span>kw2rpm<span class="signature">(inputkw)</span><span class="type-signature"> &rarr; {float}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function returns the equivalent rpm for a given power input
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputkw</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line340">line 340</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    -the rotation of the propeller generated by the given power
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">float</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>kw2rpm(inputkw){
+                     //Linear 
+                    if(inputkw >= this.maxkw){
+                        return this.maxkw;
+                    }else{
+                        return (inputkw*this.maxrpm)/(this.maxkw);
+                    }
+
+                }</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="rpm2kw"><span class="type-signature"></span>rpm2kw<span class="signature">(inputrpm)</span><span class="type-signature"> &rarr; {float}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function returns the equivalent power needed for a given rotation
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>inputrpm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line369">line 369</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - the power needed
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">float</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>rpm2kw(inputrpm){
+                    if(inputrpm > this.maxrpm){
+                        return this.maxrpm;
+                    }else{
+                        return (inputrpm*this.maxkw)/(this.maxkw);
+                    }   
+                }
+    rpmsat(inputrpm){
+                    if(Math.abs(inputrpm) > this.maxrpm){
+                        return this.maxrpm;
+                    }else return inputrpm;
+                }</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Azimuth.html">Azimuth</a></li><li><a href="baseObjects.html">baseObjects</a></li><li><a href="baseObjects_affiliations.html">affiliations</a></li><li><a href="baseObjects_boxDimensions.html">boxDimensions</a></li><li><a href="baseObjects_capabilities.html">capabilities</a></li><li><a href="baseObjects_cost.html">cost</a></li><li><a href="baseObjects_weight.html">weight</a></li><li><a href="calculations.html">calculations</a></li><li><a href="fn.html">fn</a></li><li><a href="MainPropeller.html">MainPropeller</a></li><li><a href="objects.html">objects</a></li><li><a href="objects_position.html">position</a></li><li><a href="Propeller.html">Propeller</a></li><li><a href="rtotal.html">rtotal</a></li><li><a href="Rudder.html">Rudder</a></li><li><a href="TunnelThruster.html">TunnelThruster</a></li><li><a href="vessel.html">vessel</a></li><li><a href="vessel_attributes.html">attributes</a></li><li><a href="vessel_bulkheads.html">bulkheads</a></li><li><a href="vessel_structure.html">structure</a></li></ul><h3>Global</h3><ul><li><a href="global.html#FreqResponseShipMotion">FreqResponseShipMotion</a></li><li><a href="global.html#getHoltropFunction">getHoltropFunction</a></li><li><a href="global.html#holtrop">holtrop</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.1</a> on Thu Jul 13 2017 12:33:53 GMT+0200 (Romance Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

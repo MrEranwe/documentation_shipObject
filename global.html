@@ -102,7 +102,7 @@
     
 
     
-    <h4 class="name" id="trstr"><span class="type-signature"></span>trstr<span class="signature">(str)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="FreqResponseShipMotion"><span class="type-signature"></span>FreqResponseShipMotion<span class="signature">(Length, W_Breadth, Block, Draft, Speed, heading, Position, Wave_Amplitude, Cwp, GM, natural_period, critical_damping_percentage, delta)</span><span class="type-signature"> &rarr; {<a href="global.html#Jensen">Jensen</a>}</span></h4>
     
 
     
@@ -110,7 +110,7 @@
 
 
 <div class="description">
-    Remove whitespace from around a string.
+    Calculate the frequency response of the Ship based on the Jesen article "Estimation of ship motions using closed-form expressions"(January 2004)
 </div>
 
 
@@ -146,13 +146,13 @@
 
         <tr>
             
-                <td class="name"><code>str</code></td>
+                <td class="name"><code>Length</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">float</span>
 
 
             
@@ -162,7 +162,283 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">Length of the Ship</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>W_Breadth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Waterline Breadth(B0)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Block</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Block coefficient</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Draft</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Draft of the vessel</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Speed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">relative speed of the vessel and the water in knot</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>heading</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">heading of the wave</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Position</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">position of the wave from the center of gravity</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Wave_Amplitude</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">wave amplitude</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Cwp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Water plane coefficient</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GM</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Metacentric Height</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>natural_period</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">natural period of the Wave in seconds</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>critical_damping_percentage</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">coeficient of the critical damping percentage</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>delta</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">float</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">displacement of the vessel in kg</td>
         </tr>
 
     
@@ -203,7 +479,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line26">line 26</a>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line716">line 716</a>
     </li></ul></dd>
     
 
@@ -226,6 +502,904 @@
 
 
 
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    the Ship response for a group of frequency.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#Jensen">Jensen</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getHoltropFunction"><span class="type-signature"></span>getHoltropFunction<span class="signature">(lwl, breadth, tf, lcb, cb, csm, cwl, b, tr, cstern, app, area_app, vs)</span><span class="type-signature"> &rarr; {<a href="rtotal.html">rtotal</a>|<a href="fn.html">fn</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This is a pure function that does the Holtrop calculations that are invariant with speed, and returns a function of speed that calculates fn and rtotal. The generated function can be used for efficiently calculating the resistance without concerns for invariant parameters.It has been implemented with a memoization closure for parameters that will often remain fixed.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lwl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Load Waterline Lenght.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>breadth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Width at the widest point as measured at the ship's nominal waterline.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tf</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Draft foreward.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lcb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Longitudinal position of hull centre.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Block coefficient.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>csm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Midship Coefficient</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cwl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Construction waterline</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">???</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Vertical distance from the bulbous section
+centre to the keel line</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cstern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">???</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>app</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Appendages</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>area_app</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Wetted surface of the appendages</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>vs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Service speed</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line1457">line 1457</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+<ul>
+        <li>
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="rtotal.html">rtotal</a></span>
+
+
+    </dd>
+</dl>
+</li>
+    
+        <li>
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="fn.html">fn</a></span>
+
+
+    </dd>
+</dl>
+</li>
+    </ul>
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="holtrop"><span class="type-signature"></span>holtrop<span class="signature">(lwl, breadth, tf, lcb, cb, csm, cwl, b, tr, cstern, app, area_app, vs)</span><span class="type-signature"> &rarr; {<a href="rtotal.html">rtotal</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This is a pure Holtrop function that takes speed as one of the parameters, and outputs a single rtotal value.It has been implemented with a memoization closure for parameters that will often remain fixed.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>lwl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Load Waterline Lenght.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>breadth</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Width at the widest point as measured at the ship's nominal waterline.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tf</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Draft foreward.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>lcb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Longitudinal position of hull centre.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Block coefficient.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>csm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Midship Coefficient</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cwl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Construction waterline</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">???</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Vertical distance from the bulbous section
+centre to the keel line</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cstern</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">???</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>app</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Appendages</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>area_app</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Wetted surface of the appendages</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>vs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Service speed</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line1109">line 1109</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="rtotal.html">rtotal</a></span>
+
+
+    </dd>
+</dl>
+
+    
 
 
 
@@ -234,6 +1408,427 @@
         
     
 
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id="Jensen">Jensen</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Vertical_Movement</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Vertical Motion (m/m) per frequency(rad/s)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Vertical_Acceleration</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Vertical Acceleration per frequency(rad/s)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Pitch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Pitch motion per frequency (rad/s)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Heave</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Heave motion per frequency (rad/s)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Bending</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Bending Moment per frequency(rad/s)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Roll</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Roll motion per frequency(rad/s)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structure.js.html">structure.js</a>, <a href="structure.js.html#line894">line 894</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function FreqResponseShipMotion (Length,W_Breadth,Block,Draft,Speed,heading,Position,Wave_Amplitude,Cwp,GM,natural_period,critical_damping_percentage,delta){
+        
+    var wave_freq = [];
+    var Vertical_Movement=[];
+    var Vertical_Acceleration=[];
+    var Pitch_Movement=[];
+    var Heave_Movement=[];
+    var Bending_Moment=[];
+    var Roll_Movement=[];
+    var wave_period=[];
+
+    //Vector declaration in the the main function -- They receive the properties and are used to plot the curves//
+    var Results_array1=[];
+    var Results_array2=[];
+    var Results_array3=[];
+    var Results_array4=[];
+    var Results_array5=[]; 
+    var Results_array6=[];
+    var Results_array7=[];	
+
+    //These constants and variables are prepared to be used inside the "for()" that calculates the vessels motion responses 
+    g=9.81;	
+    betha=heading*Math.PI/180;
+
+    Breadth = W_Breadth*Block;
+    Speed_metric=Speed*0.5144444;
+    Froude_N=Speed_metric/Math.sqrt((g*Length));
+    position=Length*Position/200;
+
+    //This "for()" calculates the vessel responses to different waves frequencies//
+
+    for (i = 0; i &lt;= 1000; i++){
+        wave_freq[i]=0.05+1.95*i/1000;
+        wave_number=Math.pow(wave_freq[i],2)/g;
+        eff_wave_number=Math.abs(wave_number*Math.cos(betha));
+        smith_factor=Math.exp(-wave_number*Draft);
+        alpha=1-Froude_N*Math.sqrt(wave_number*Length)*Math.cos(betha);
+        sectional_hydro_damping=2*Math.sin(0.5*wave_number*Breadth*Math.pow(alpha,2))*Math.exp(-wave_number*Draft*Math.pow(alpha,2));
+        a=Math.pow(1-wave_number*Draft,2);
+        b=Math.pow((Math.pow(sectional_hydro_damping,2)/(wave_number*Breadth*Math.pow(alpha,3))),2);
+        f=Math.sqrt(a+b);
+        F=smith_factor*f*(2/(eff_wave_number*Length))*Math.sin(eff_wave_number*Length/2);
+        G=smith_factor*f*(24/(Math.pow(eff_wave_number*Length,2)*Length))*(Math.sin(eff_wave_number*Length/2)-(eff_wave_number*Length/2)*Math.cos(eff_wave_number*Length/2));
+        eta=1/(Math.sqrt(Math.pow((1-2*wave_number*Draft*Math.pow(alpha,2)),2)+Math.pow(Math.pow(sectional_hydro_damping,2)/(wave_number*Breadth*Math.pow(alpha,2)),2)));
+        FRF_Heave=Wave_Amplitude*eta* F;
+        FRF_Pitch=Wave_Amplitude*eta* G;
+
+        Vertical_Movement[i]=Math.sqrt(Math.pow(FRF_Heave,2) + Math.pow(FRF_Pitch,2)*Math.pow(position,2));
+        Vertical_Acceleration[i]=Math.pow(alpha,2)*wave_number*g*Vertical_Movement[i];
+        Pitch_Movement[i]=Math.sqrt(Math.pow(FRF_Pitch,2)*Math.pow(position,2));
+        Heave_Movement[i]=Math.abs(FRF_Heave);
+
+        //Bending Moment Response//
+
+        Cb=Math.max(0.6,Block);    
+        phi=2.5*(1-Cb);    
+        F_Cb=(Math.pow(1-phi,2)+0.6*alpha*(2-phi));  
+
+        F_v=1+3*Math.pow(Froude_N,2);    
+
+        Bending_Moment[i]=Wave_Amplitude*(smith_factor*((1-wave_number*Draft)/(Math.pow(Length*eff_wave_number,2)))*(1-Math.cos(eff_wave_number*Length/2)-(eff_wave_number*Length/4)*Math.sin(eff_wave_number*Length/2))*F_v*F_Cb*Math.pow(Math.abs(Math.cos(betha)),1/3))*1025*g*W_Breadth*Length*Length/1000000;
+
+    }
+
+    ////// ROLL /////
+    critical_damping_percentage = critical_damping_percentage/100;
+
+    B_0 = W_Breadth;    
+    Cb=Block;   
+    restoring_moment_coeff = g*1025*Cb*Length*W_Breadth*Draft*GM;    
+
+    for (i = 0; i &lt;= 1000; i++){
+
+        wave_freq[i]=0.05+1.95*i/1000;
+        wave_period[i]=2*3.14159/wave_freq[i];
+        wave_number=Math.pow(wave_freq[i],2)/g;
+
+        alpha=1-Froude_N*Math.sqrt(wave_number*Length)*Math.cos(betha);
+        encounter_frequency =  wave_freq[i]*alpha;           
+        eff_wave_number=Math.abs(wave_number*Math.cos(betha));
+
+        breadth_ratio =  (Cwp - delta)/(1 - delta);
+        B_1 = breadth_ratio*B_0;
+        A_0 = Cb*B_0*Draft/(delta+breadth_ratio*(1-delta));
+        A_1 = breadth_ratio*A_0;
+
+        //sectional damping coefficient//
+        Breadth_Draft_ratio = B_0/Draft;                                
+            //3 &amp;lt;= B/T &amp;lt;= 6//
+        if (Breadth_Draft_ratio>3){
+            a0=0.256*Breadth_Draft_ratio - 0.286;
+            b0=-0.11*Breadth_Draft_ratio - 2.55;
+            d0=0.033*Breadth_Draft_ratio - 1.419;
+        }
+
+            //1 &amp;lt;= B/T &amp;lt;= 3//
+        else {
+            a0=-3.94*Breadth_Draft_ratio + 13.69;
+            b0=-2.12*Breadth_Draft_ratio - 1.89;
+            d0=1.16*Breadth_Draft_ratio-7.97;
+        }
+
+        Breadth_Draft_ratio = B_1/Draft;                                
+            //3 &amp;lt;= B/T &amp;lt;= 6//
+        if (Breadth_Draft_ratio>3){
+            a1=0.256*Breadth_Draft_ratio - 0.286; 
+            b1=-0.11*Breadth_Draft_ratio - 2.55;
+            d1=0.033*Breadth_Draft_ratio - 1.419;
+        }
+
+            //1 &amp;lt;= B/T &amp;lt;= 3//
+        else {
+            a1=-3.94*Breadth_Draft_ratio + 13.69;
+            b1=-2.12*Breadth_Draft_ratio - 1.89;
+            d1=1.16*Breadth_Draft_ratio-7.97;
+        }
+
+        // console.log(B_0/Draft,B_1/Draft)
+        //console.log(a0,a1)
+        //B_44 - hydro damping coeff//
+        b_44_0 = (1025*A_0*B_0*B_0*a0*Math.exp(b0*Math.pow(encounter_frequency,-1.3))*Math.pow(encounter_frequency,d0)/(Math.sqrt(B_0/(2*g))));
+        b_44_1 = (1025*A_1*B_1*B_1*a1*Math.exp(b1*Math.pow(encounter_frequency,-1.3))*Math.pow(encounter_frequency,d1)/(Math.sqrt(B_1/(2*g))));
+
+        damping_ratio=Math.sqrt(b_44_1/b_44_0);
+
+        b_44 = Length*b_44_0*(delta + b_44_1*(1-delta)/b_44_0);
+        //total damping = hydro damping + additional damping//
+
+        add_damping = restoring_moment_coeff*natural_period/Math.PI;
+
+        roll_hydro_damping= b_44 + add_damping*critical_damping_percentage;
+
+        //excitation frequency//
+        if (heading == 90  || heading ==270){
+        excitation_frequency=Math.sqrt(1025*g*g*b_44_0/encounter_frequency)*(delta+damping_ratio*(1-delta))*Length
+
+        }
+        else{  
+            A=Math.abs(Math.sin(betha))*Math.sqrt(1025*g*g/encounter_frequency)*Math.sqrt(b_44_0)*2/eff_wave_number;
+            B=Math.pow(Math.sin(0.5*delta*Length*eff_wave_number),2);
+            C=Math.pow(damping_ratio*Math.sin(0.5*(1-delta)*Length*eff_wave_number),2);
+            D=2*damping_ratio*Math.sin(0.5*delta*Length*eff_wave_number)*Math.sin(0.5*(1-delta)*Length*eff_wave_number)*Math.cos(0.5*Length*eff_wave_number);
+
+            excitation_frequency=A*Math.sqrt(B+C+D)
+        }
+
+        //  excitation_frequency=Math.sqrt(1025*g*g*b_44_0/encounter_frequency)*(delta+damping_ratio*(1-delta))*Length; 
+        //main formula//
+
+        A = Math.pow(-Math.pow(encounter_frequency*natural_period/(2*3.14159),2)+1,2);
+        B = Math.pow(restoring_moment_coeff,2); 
+        C = Math.pow(encounter_frequency*roll_hydro_damping,2); 
+
+
+        Roll_Movement[i] = Wave_Amplitude*excitation_frequency/(Math.sqrt(A*B+C));
+        //Roll_Movement[i] = Wave_Amplitude*excitation_frequency
+
+    }
+
+    //This "for()" receives the results from the motion vectors and prepare the graphics//
+
+    for (i = 0; i &lt;= 1000; i++) 
+    {
+        Results_array1.push([wave_freq[i],Vertical_Movement[i]]);
+        Results_array2.push([wave_freq[i],Vertical_Acceleration[i]]);
+        Results_array3.push([wave_freq[i],Pitch_Movement[i]]);
+        Results_array4.push([wave_freq[i],Heave_Movement[i]]);
+        Results_array5.push([wave_freq[i],Bending_Moment[i]]);
+        Results_array6.push([wave_freq[i],Roll_Movement[i]*180/Math.PI]);
+        Results_array7.push([wave_period[i],Roll_Movement[i]*180/Math.PI]);
+
+    }
+
+
+    Results = {"Vertical_Movement":Results_array1,"Vertical_Acceleration":Results_array2,"Pitch":Results_array3,"Heave":Results_array4,"Bending":Results_array5,"Roll":Results_array6};
+    return Results;
+    
+}</code></pre>
+
+
+
+            
     
 
     
@@ -247,13 +1842,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="shipdesign.html">shipdesign</a></li></ul><h3>Namespaces</h3><ul><li><a href="util.html">util</a></li></ul><h3>Global</h3><ul><li><a href="global.html#trstr">trstr</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Azimuth.html">Azimuth</a></li><li><a href="baseObjects.html">baseObjects</a></li><li><a href="baseObjects_affiliations.html">affiliations</a></li><li><a href="baseObjects_boxDimensions.html">boxDimensions</a></li><li><a href="baseObjects_capabilities.html">capabilities</a></li><li><a href="baseObjects_cost.html">cost</a></li><li><a href="baseObjects_weight.html">weight</a></li><li><a href="calculations.html">calculations</a></li><li><a href="fn.html">fn</a></li><li><a href="MainPropeller.html">MainPropeller</a></li><li><a href="objects.html">objects</a></li><li><a href="objects_position.html">position</a></li><li><a href="Propeller.html">Propeller</a></li><li><a href="rtotal.html">rtotal</a></li><li><a href="Rudder.html">Rudder</a></li><li><a href="TunnelThruster.html">TunnelThruster</a></li><li><a href="vessel.html">vessel</a></li><li><a href="vessel_attributes.html">attributes</a></li><li><a href="vessel_bulkheads.html">bulkheads</a></li><li><a href="vessel_structure.html">structure</a></li></ul><h3>Global</h3><ul><li><a href="global.html#FreqResponseShipMotion">FreqResponseShipMotion</a></li><li><a href="global.html#getHoltropFunction">getHoltropFunction</a></li><li><a href="global.html#holtrop">holtrop</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.0</a> on Tue Jul 11 2017 11:21:14 GMT+0200 (Romance Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.1</a> on Thu Jul 13 2017 12:33:53 GMT+0200 (Romance Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
